@@ -1,0 +1,5 @@
+export { default as Signup } from './Signup/Signup'
+export { default as Signin } from './Signin/Signin'
+export { default as CreateProfile } from './CreateProfile/CreateProfile'
+export { default as Home } from './Home/Home'
+export { default as UserPost } from './UserPost/UserPost'
