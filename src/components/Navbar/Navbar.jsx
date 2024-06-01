@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, message } from "antd";
 import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import logo from "@/assets/Media/logo2.png";
 
 const Navbar = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -34,17 +36,15 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="bg-black p-8 flex justify-between">
-        <h1 className="text-5xl text-white">STARCHAT</h1>
-        <div className="flex gap-12 items-center">
-          <Button type="primary" onClick={handlePost}>
-            View Posts
-          </Button>
-          <Button type="primary" danger onClick={onSignout}>
-            Logout
-          </Button>
-        </div>
+    <div className="bg-black px-8 flex flex-col md:flex-row justify-between items-center head-container">
+      <img src={logo} alt="logo" className="logo" />
+      <div className="flex gap-4 md:gap-12 items-center w-full md:w-auto justify-center md:justify-end">
+        <Button type="primary" onClick={handlePost} className="w-full md:w-auto">
+          View Posts
+        </Button>
+        <Button type="primary" danger onClick={onSignout} className="w-full md:w-auto">
+          Logout
+        </Button>
       </div>
     </div>
   );

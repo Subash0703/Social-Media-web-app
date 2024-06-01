@@ -1,0 +1,90 @@
+.signup-container {
+    height: 100vh;
+    background: url("@/assets/Media/Sign-bg.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    background: rgba(255, 255, 255, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-input {
+    background: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+.signup-input:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.signup-input::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.signup-input:focus::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.signup-input:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.signup-input:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.signup-input:active {
+    transform: scale(0.98);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.signup-input:disabled {
+    background: rgba(255, 255, 255, 0.3);   
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+.signup-input:disabled::placeholder {
+    color: rgb(55, 52, 52);
+}  
+
+.signup-input:disabled:focus::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.signup-input:disabled:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.signup-input:disabled:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.signup-input:disabled:active {
+    transform: scale(0.98);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}

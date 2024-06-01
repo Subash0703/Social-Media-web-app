@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { storage, db } from "@/utils/firebase";
 import { ref, uploadBytes } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore";
+
+import logo from "@/assets/Media/logo2.png";
+import "./CreateProfile.css";
 
 const CreateProfile = () => {
   const [loading, setLoading] = useState(false);
@@ -14,7 +17,7 @@ const CreateProfile = () => {
   const [username, setUsername] = useState("");
   const [mobile, setMobile] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const uploadButton = (
     <button
@@ -45,23 +48,31 @@ const CreateProfile = () => {
       const profileImgRef = ref(storage, `profile/${uid}`);
       const snapshot = uploadBytes(profileImgRef, image.originFileObj);
       console.log("snapshot", snapshot);
-      const docRef = await addDoc(collection(db, "users"),{uid, name, username, mobile});
-      navigate("/homepage")
+      const docRef = await addDoc(collection(db, "users"), {
+        uid,
+        name,
+        username,
+        mobile,
+      });
+      navigate("/homepage");
     } catch (error) {
       console.log(error);
       alert(`${error.code} - ${error.message}`);
     } finally {
-        setLoading(false)
-        setIsLoading(false)
+      setLoading(false);
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen profile-container">
       <div className="w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Create Profile</h1>
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-8 profile-form">
+          <div className="flex justify-center items-center">
+            <img src={logo} alt="logo" className="logo" />
+          </div>
           <div className="text-center mb-4">
+            <h1 className="text-2xl font-bold mb-4">Create Profile</h1>
             <Upload
               fileList={[image]}
               name="avatar"
@@ -76,12 +87,14 @@ const CreateProfile = () => {
             <Input
               placeholder="Full Name"
               onChange={(e) => setName(e.target.value)}
+              className="profile-input"
             />
           </div>
           <div className="mb-4">
             <Input
               placeholder="User Name"
               onChange={(e) => setUsername(e.target.value)}
+              className="profile-input"
             />
           </div>
 
@@ -89,6 +102,7 @@ const CreateProfile = () => {
             <Input
               placeholder="Mobile"
               onChange={(e) => setMobile(e.target.value)}
+              className="profile-input"
             />
           </div>
           <div className="text-center">

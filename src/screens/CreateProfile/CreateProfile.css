@@ -1,0 +1,90 @@
+.profile-container {
+    height: 100vh;
+    background: url("@/assets/Media/Sign-bg.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-form {
+    background: rgba(255, 255, 255, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-input {
+    background: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+.profile-input:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.profile-input::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.profile-input:focus::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.profile-input:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.profile-input:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.profile-input:active {
+    transform: scale(0.98);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile-input:disabled {
+    background: rgba(255, 255, 255, 0.3);   
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+.profile-input:disabled::placeholder {
+    color: rgb(55, 52, 52);
+}  
+
+.profile-input:disabled:focus::placeholder {
+    color: rgb(55, 52, 52);
+}
+
+.profile-input:disabled:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-input:disabled:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-input:disabled:active {
+    transform: scale(0.98);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
