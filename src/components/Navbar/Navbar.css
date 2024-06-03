@@ -9,5 +9,5 @@
 .logo{
     height: 150px !important;
     object-fit: contain;
-
+    cursor: pointer;
 }

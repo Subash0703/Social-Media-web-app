@@ -8,6 +8,7 @@ const Navbar = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   const navigate = useNavigate();
+
   const handlePost = () => {
     navigate("/posts");
   };
@@ -35,9 +36,15 @@ const Navbar = () => {
     }
   };
 
+  const handleHome = () => {
+    setTimeout(() => {
+      navigate("/homepage");
+    }, 500);
+  };
+
   return (
     <div className="bg-black px-8 flex flex-col md:flex-row justify-between items-center head-container">
-      <img src={logo} alt="logo" className="logo" />
+      <img src={logo} alt="logo" className="logo" onClick={handleHome}/>
       <div className="flex gap-4 md:gap-12 items-center w-full md:w-auto justify-center md:justify-end">
         <Button type="primary" onClick={handlePost} className="w-full md:w-auto">
           View Posts
