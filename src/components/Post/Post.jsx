@@ -65,8 +65,8 @@ const Post = () => {
   return (
     <>
     <Navbar />
-    <div className="">
-      <div className="flex flex-row flex-wrap justify-center items-center mt-6 p-12 gap-12">
+    <div className="p-4 sm:p-8 lg:p-12">
+      <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-12">
         {posts.map((post) => (
           <Card
             key={post.id}
@@ -74,7 +74,7 @@ const Post = () => {
             bordered={true}
             loading={loading}
             hoverable={true}
-            className="flex-1 flex-grow"
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-6"
           >
             <Avatar size={80} src={post.profileImgUrl} className="mb-2" />
             <h2 className="font-semibold">{post.posttitle}</h2>

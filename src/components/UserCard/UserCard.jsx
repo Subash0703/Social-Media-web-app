@@ -68,7 +68,7 @@ const UserCard = ({ searchUser }) => {
 
   return (
     <>
-      <div className="flex gap-12 flex-wrap">
+      <div className="flex gap-12 flex-wrap justify-center items-center">
         {filteredUsers.map((user) => (
           <Card
             key={user.uid}
